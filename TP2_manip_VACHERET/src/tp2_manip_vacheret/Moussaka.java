@@ -13,4 +13,8 @@ public class Moussaka {
     public Moussaka (int vlr) {
         nbCalories = vlr ;
     }
+
+    Moussaka() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
