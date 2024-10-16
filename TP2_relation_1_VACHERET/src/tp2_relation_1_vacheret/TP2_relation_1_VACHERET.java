@@ -11,25 +11,25 @@ public class TP2_relation_1_VACHERET {
         Personne reno = new Personne("Reno", "Raines");
         System.out.println("liste des voitures disponibles "+ uneClio +"\n" + uneAutreClio + "\n" + une2008 + "\n" + uneMicra ) ;
         bob.liste_voitures[0] = uneClio ;
-        bob.nbvoitures = bob.nbvoitures++ ;
+        bob.nbvoitures++ ;
         uneClio.Proprietaire = bob ;
-        System.out.println("la premiere voiture de Bob est " +bob.liste_voitures[0] ) ;
+        System.out.println("la premiere voiture de "+bob.prenom+" est " +bob.liste_voitures[0] ) ;
         bob.liste_voitures[1] = une2008 ;
-        bob.nbvoitures = bob.nbvoitures++ ;
+        bob.nbvoitures++ ;
         une2008.Proprietaire = bob ;
-        System.out.println("la deuxieme voiture de Bob est " +bob.liste_voitures[1] ) ;
+        System.out.println("la deuxieme voiture de "+bob.prenom+" est " +bob.liste_voitures[1] ) ;
         reno.liste_voitures[0] = uneAutreClio ;
-        reno.nbvoitures = reno.nbvoitures ;
+        reno.nbvoitures++ ;
         uneAutreClio.Proprietaire = reno ;
-        System.out.println("la premiere voiture de Bob est " +reno.liste_voitures[0] ) ;
+        System.out.println("la premiere voiture de "+reno.prenom+" est " +reno.liste_voitures[0] ) ;
         reno.liste_voitures[1] = uneMicra ;
-        reno.nbvoitures = reno.nbvoitures ;
+        reno.nbvoitures++ ;
         uneMicra.Proprietaire = reno ;
-        System.out.println("la deuxieme voiture de Bob est " +reno.liste_voitures[1] ) ;
+        System.out.println("la deuxieme voiture de "+reno.prenom+" est " +reno.liste_voitures[1] ) ;
         reno.ajouter_voiture(unepouma);
         bob.ajouter_voiture(unepouma);
-        System.out.println("la troisieme voiture de Bob est " +reno.liste_voitures[2] ) ;
-        System.out.println("la troisieme voiture de Bob est " +bob.liste_voitures[2] ) ;
+        System.out.println("la troisieme voiture de "+reno.prenom+" est " +reno.liste_voitures[2] ) ;
+        System.out.println("la troisieme voiture de "+bob.prenom+" est " +bob.liste_voitures[2] ) ;
     }
     
 }
