@@ -24,8 +24,8 @@ public class Personne {
     }
     @Override
     public String toString() {
-    String chaine_a_retourner;
-    chaine_a_retourner = nom + prenom + "a une voiture";
-    return chaine_a_retourner ;
+        String chaine_a_retourner;
+        chaine_a_retourner = nom + prenom + "a une voiture";
+        return chaine_a_retourner ;
     }
 }
