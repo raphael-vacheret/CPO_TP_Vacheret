@@ -8,16 +8,16 @@ package tp3_heroic_fantasy_vacheret;
  *
  * @author Administrateur
  */
-public class Epee extends Arme {
-    private int finesse;
-    public Epee(int finesse, String nom, int niveau) {
-        super(nom, niveau);
-        if (finesse<0 || finesse>100) this.finesse=0;
-        else this.finesse = finesse;
+public class Magicien extends Personnage {
+    private boolean comfirme;
+
+    public Magicien(String nom_Perso, int nbVie, boolean comfirme) {
+        super(nom_Perso, nbVie);
+        this.comfirme = comfirme;
     }
 
-    public int getFinesse() {
-        return finesse;
+    public void setComfirme(boolean comfirme) {
+        this.comfirme = comfirme;
     }
     
 }
