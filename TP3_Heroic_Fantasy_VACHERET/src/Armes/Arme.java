@@ -4,6 +4,7 @@
  */
 
 package Armes;
+import Personnages.Personnage;
 /**
  *
  * @author Administrateur
@@ -12,6 +13,8 @@ package Armes;
 public abstract class Arme {
     private String nom;
     private int niveau;
+    Personnage Proprietaire=null;
+    Arme liste_Arme;
     public Arme(String nom , int niveau) {
         this.nom = nom;
         if (niveau<0 || niveau>100) this.niveau=0;
@@ -25,6 +28,23 @@ public abstract class Arme {
     public int getNiveau() {
         return niveau;
     }
+
+    public void setProprietaire(Personnage Proprietaire) {
+        this.Proprietaire = Proprietaire;
+    }
+
+    public void setListe_Arme(Arme liste_Arme) {
+        this.liste_Arme = liste_Arme;
+    }
+
+    public Personnage getProprietaire() {
+        return Proprietaire;
+    }
+
+    public Arme getListe_Arme() {
+        return liste_Arme;
+    }
+    
     
     @Override
     public String toString() {
