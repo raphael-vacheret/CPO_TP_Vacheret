@@ -29,7 +29,7 @@ public abstract class Arme {
     @Override
     public String toString() {
         String chaine_a_retourner;
-        chaine_a_retourner = nom+ "est une arme avec un niveau :"+niveau;
+        chaine_a_retourner = nom+ " est une arme avec un niveau :"+niveau;
         return chaine_a_retourner ;
     }
 }

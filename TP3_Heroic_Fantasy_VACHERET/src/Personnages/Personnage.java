@@ -1,4 +1,4 @@
-package tp3_heroic_fantasy_vacheret;
+package Personnages;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -28,7 +28,7 @@ public abstract class Personnage {
     @Override
     public String toString() {
         String chaine_a_retourner;
-        chaine_a_retourner = nom_Perso+ "est un perso avec un niveau :"+nbVie;
+        chaine_a_retourner = nom_Perso+ "est un perso avec un niveau de point de vie egale a "+nbVie;
         return chaine_a_retourner ;
     }
 }
