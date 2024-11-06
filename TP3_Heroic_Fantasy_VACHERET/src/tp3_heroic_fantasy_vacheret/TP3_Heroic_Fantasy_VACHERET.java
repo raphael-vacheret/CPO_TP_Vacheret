@@ -8,6 +8,8 @@ import Personnages.Magicien;
 import Armes.Epee;
 import java.util.ArrayList;
 import Armes.Baton;
+import Armes.Arme;
+import Personnages.Personnage;
 
 
 
@@ -25,9 +27,9 @@ public class TP3_Heroic_Fantasy_VACHERET {
         System.out.println("l'epee "+Duran.getNom()+" a un niveau de : "+Duran.getNiveau()+" et une finesse de "+Duran.getFinesse()+"");
         System.out.println("le baton "+Che.getNom()+" a un niveau de : "+Che.getNiveau()+" et un age de "+Che.getAge()+"");
         System.out.println("le baton "+Char.getNom()+" a un niveau de : "+Char.getNiveau()+" et une finesse de "+Char.getAge()+"");
-        ArrayList<Epee> TabEpee = new ArrayList<>();
-        TabEpee.add(Exca);
-        TabEpee.add(Duran);
+        ArrayList<Arme> TabArme = new ArrayList<Arme>();
+        TabArme.add(Exca);
+        TabArme.add(Duran);
         ArrayList<Baton> TabBaton = new ArrayList<>();
         TabBaton.add(Che);
         TabBaton.add(Char);
@@ -37,8 +39,8 @@ public class TP3_Heroic_Fantasy_VACHERET {
         ArrayList<Magicien> TabMage = new ArrayList<>();
         TabMage.add(unMage);
         TabMage.add(MageDeux);
-        for(int i=0;i<TabEpee.size();i++) {
-            System.out.println(TabEpee.get(i)+" et une finesse de :"+TabEpee.get(i).getFinesse());
+        for(int i=0;i<TabArme.size();i++) {
+            System.out.println(TabArme.get(i)+" et une finesse);
         }
         for(int i=0;i<TabBaton.size();i++) {
             System.out.println(TabBaton.get(i)+" et un age de :"+TabBaton.get(i).getAge());

@@ -20,6 +20,11 @@ public class Baton extends Arme {
     public int getAge() {
         return age;
     }
+
+    @Override
+    public String toString() {
+        return nom "a un niveau :";
+    }
     
     
     
