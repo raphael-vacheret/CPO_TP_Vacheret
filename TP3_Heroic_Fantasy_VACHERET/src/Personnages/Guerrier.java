@@ -11,7 +11,7 @@ import Personnages.Personnage;
  * @author Administrateur
  */
 public class Guerrier extends Personnage {
-    private boolean cheval;
+    private boolean cheval=false;
 
      public Guerrier(String nom_Perso, int nbVie,boolean cheval) {
         super(nom_Perso, nbVie);
@@ -25,5 +25,11 @@ public class Guerrier extends Personnage {
     public boolean isCheval() {
         return cheval;
     }
+
+    @Override
+    public String toString() {
+        return "nom=" + getNom() + ", age=" + cheval + ", niveau=" + getNiveau();
+    }
+    
     
 }

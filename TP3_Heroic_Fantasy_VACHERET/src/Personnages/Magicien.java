@@ -11,7 +11,7 @@ import Personnages.Personnage;
  * @author Administrateur
  */
 public class Magicien extends Personnage {
-    private boolean comfirme;
+    private boolean comfirme=false;
 
     public Magicien(String nom_Perso, int nbVie, boolean comfirme) {
         super(nom_Perso, nbVie);
@@ -24,6 +24,11 @@ public class Magicien extends Personnage {
 
     public boolean isComfirme() {
         return comfirme;
+    }
+
+    @Override
+    public String toString() {
+        return "nom=" + getNom() + ", age=" + comfirme + ", niveau=" + getNiveau();
     }
     
 }

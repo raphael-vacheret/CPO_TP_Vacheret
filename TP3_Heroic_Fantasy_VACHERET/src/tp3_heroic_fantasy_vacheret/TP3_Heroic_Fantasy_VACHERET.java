@@ -17,46 +17,43 @@ public class TP3_Heroic_Fantasy_VACHERET {
     public static void main(String[] args) {
         Epee Exca = new Epee(70,"Excalibur",50);
         Epee Duran = new Epee(40,"Durandal",70);
+        Epee Gram = new Epee(60,"Gram",60);
         Baton Che = new Baton(40,"Chene",50);
         Baton Char = new Baton(50,"Charme",60);
+        Baton Sur = new Baton(80,"baguette de sureau",70);
         Guerrier unGuerrier = new Guerrier("Lannister", 45,true);
         Guerrier GuerrierDeux = new Guerrier("Conan", 78,false);
         Magicien unMage = new Magicien("Gandlaf",65,true);
         Magicien MageDeux = new Magicien("Garcimore",44,false);
-        System.out.println("l'epee "+Exca.getNom()+" a un niveau de : "+Exca.getNiveau()+" et une finesse de "+Exca.getFinesse()+"");
-        System.out.println("l'epee "+Duran.getNom()+" a un niveau de : "+Duran.getNiveau()+" et une finesse de "+Duran.getFinesse()+"");
-        System.out.println("le baton "+Che.getNom()+" a un niveau de : "+Che.getNiveau()+" et un age de "+Che.getAge()+"");
-        System.out.println("le baton "+Char.getNom()+" a un niveau de : "+Char.getNiveau()+" et une finesse de "+Char.getAge()+"");
-        ArrayList<Arme> TabArme = new ArrayList<Arme>();
+        //System.out.println("l'epee "+Exca.getNom()+" a un niveau de : "+Exca.getNiveau()+" et une finesse de "+Exca.getFinesse()+"");
+        //System.out.println("l'epee "+Duran.getNom()+" a un niveau de : "+Duran.getNiveau()+" et une finesse de "+Duran.getFinesse()+"");
+        //System.out.println("le baton "+Che.getNom()+" a un niveau de : "+Che.getNiveau()+" et un age de "+Che.getAge()+"");
+        //System.out.println("le baton "+Char.getNom()+" a un niveau de : "+Char.getNiveau()+" et une finesse de "+Char.getAge()+"");
+        ArrayList<Arme> TabArme = new ArrayList<>();
         TabArme.add(Exca);
         TabArme.add(Duran);
-        ArrayList<Baton> TabBaton = new ArrayList<>();
-        TabBaton.add(Che);
-        TabBaton.add(Char);
-        ArrayList<Guerrier> TabGuerrier = new ArrayList<>();
-        TabGuerrier.add(unGuerrier);
-        TabGuerrier.add(GuerrierDeux);
-        ArrayList<Magicien> TabMage = new ArrayList<>();
-        TabMage.add(unMage);
-        TabMage.add(MageDeux);
-        for(int i=0;i<TabArme.size();i++) {
-            System.out.println(TabArme.get(i)+" et une finesse);
-        }
-        for(int i=0;i<TabBaton.size();i++) {
-            System.out.println(TabBaton.get(i)+" et un age de :"+TabBaton.get(i).getAge());
-        }
-        for(int i=0;i<TabGuerrier.size();i++) {
-            if (TabGuerrier.get(i).isCheval()==true) {
-                System.out.println(TabGuerrier.get(i)+", il a un cheval");                
-            }
-            else System.out.println(TabGuerrier.get(i)+", il n'a pas de cheval");
-        }
-        for(int i=0;i<TabMage.size();i++) {
-            if (TabMage.get(i).isComfirme()==true) {
-                System.out.println(TabMage.get(i)+", il est confirme");                
-            }
-            else System.out.println(TabMage.get(i)+", il n'est pas confirme");
-        }
+        TabArme.add(Che);
+        TabArme.add(Char);
+        TabArme.add(Gram);
+        TabArme.add(Sur);
+        ArrayList<Personnage> TabPersonnage = new ArrayList<>();
+        TabPersonnage.add(unGuerrier);
+        TabPersonnage.add(GuerrierDeux);
+        TabPersonnage.add(unMage);
+        TabPersonnage.add(MageDeux);
+        //System.out.println(TabArme.toString());
+        //System.out.println(TabPersonnage.toString());
+        unGuerrier.ajouter_Arme(Exca);
+        unGuerrier.ajouter_Arme(Duran);
+        unGuerrier.ajouter_Arme(Che);
+        unGuerrier.equiper_Arme(0);
+        unMage.ajouter_Arme(Gram);
+        unMage.ajouter_Arme(Char);
+        unMage.ajouter_Arme(Sur);       
+        //System.out.println(unGuerrier.getArme_en_Main());
+        //System.out.println(GuerrierDeux.getArme_en_Main());
+        //GuerrierDeux.getArme_en_Main();
+        System.out.println(unMage.competences());
     }
     
 }

@@ -23,8 +23,10 @@ public class Baton extends Arme {
 
     @Override
     public String toString() {
-        return nom "a un niveau :";
+        return "nom=" + getNom() + ", age=" + this.age + ", niveau=" + getNiveau();
     }
+
+    
     
     
     

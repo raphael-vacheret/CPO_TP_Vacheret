@@ -21,5 +21,8 @@ public class Epee extends Arme {
         return finesse;
     }
 
-    
+    @Override
+    public String toString() {
+        return "nom=" + getNom() + ", age=" + this.finesse + ", niveau=" + getNiveau();
+    }
 }
