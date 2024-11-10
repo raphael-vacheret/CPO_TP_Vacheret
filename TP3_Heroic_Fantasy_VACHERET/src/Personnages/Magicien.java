@@ -6,11 +6,12 @@ package Personnages;
 
 import Personnages.Personnage;
 
+
 /**
  *
  * @author Administrateur
  */
-public class Magicien extends Personnage implements AutoCloseable {
+public class Magicien extends Personnage {
     private boolean comfirme=false;
     public static int nbr_Magicien=0;
 
@@ -28,9 +29,8 @@ public class Magicien extends Personnage implements AutoCloseable {
     public boolean isComfirme() {
         return comfirme;
     }
-    @Override
+    
     public void close() {
-        
         nbr_combatant--;
         nbr_Magicien--;
     }

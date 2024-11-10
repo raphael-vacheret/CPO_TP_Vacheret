@@ -58,8 +58,10 @@ public class TP3_Heroic_Fantasy_VACHERET {
         System.out.println("il y a :"+Guerrier.nbr_Guerrier+" guerrier present dans le jeu");
         System.out.println("il y a :"+Magicien.nbr_Magicien+" magicien present dans le jeu");
         MageDeux.close();
+        MageDeux=null;
+        System.gc();
         System.out.println("il y a :"+Magicien.nbr_Magicien+" magicien present dans le jeu");
-        System.out.println(MageDeux.toString());
+        //System.out.println(MageDeux.toString());
         System.out.println(unMage.toString());
     }
     
