@@ -54,6 +54,13 @@ public class TP3_Heroic_Fantasy_VACHERET {
         //System.out.println(GuerrierDeux.getArme_en_Main());
         //GuerrierDeux.getArme_en_Main();
         System.out.println(unMage.competences());
+        System.out.println("il y a :"+Personnage.nbr_combatant+" personnage present dans le jeu");
+        System.out.println("il y a :"+Guerrier.nbr_Guerrier+" guerrier present dans le jeu");
+        System.out.println("il y a :"+Magicien.nbr_Magicien+" magicien present dans le jeu");
+        MageDeux.close();
+        System.out.println("il y a :"+Magicien.nbr_Magicien+" magicien present dans le jeu");
+        System.out.println(MageDeux.toString());
+        System.out.println(unMage.toString());
     }
     
 }

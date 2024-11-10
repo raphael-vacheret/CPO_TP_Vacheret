@@ -14,9 +14,11 @@ public abstract class Personnage {
     int nbArme=0;
     Arme Arme_en_Main=null;
     ArrayList<Arme> liste_Arme = new ArrayList<>();
+    public static int nbr_combatant=0;
     public Personnage(String nom_Perso , int nbVie) {
         this.nom_Perso = nom_Perso;
         this.nbVie=nbVie;
+        //nbr_combatant++;
     }
 
     public String getNom() {
@@ -30,6 +32,9 @@ public abstract class Personnage {
     public Arme getArme_en_Main() {
         return Arme_en_Main;
     }
+    
+
+    
     
     public boolean ajouter_Arme(Arme Arme_a_ajouter) {
         Personnage perso = Arme_a_ajouter.getProprietaire();

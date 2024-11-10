@@ -10,12 +10,15 @@ import Personnages.Personnage;
  *
  * @author Administrateur
  */
-public class Magicien extends Personnage {
+public class Magicien extends Personnage implements AutoCloseable {
     private boolean comfirme=false;
+    public static int nbr_Magicien=0;
 
     public Magicien(String nom_Perso, int nbVie, boolean comfirme) {
         super(nom_Perso, nbVie);
         this.comfirme = comfirme;
+        nbr_combatant++;
+        nbr_Magicien++;
     }
 
     public void setComfirme(boolean comfirme) {
@@ -25,7 +28,13 @@ public class Magicien extends Personnage {
     public boolean isComfirme() {
         return comfirme;
     }
-
+    @Override
+    public void close() {
+        
+        nbr_combatant--;
+        nbr_Magicien--;
+    }
+    
     @Override
     public String toString() {
         return "nom=" + getNom() + ", age=" + comfirme + ", niveau=" + getNiveau();

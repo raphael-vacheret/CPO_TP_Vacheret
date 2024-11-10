@@ -10,12 +10,15 @@ import Personnages.Personnage;
  *
  * @author Administrateur
  */
-public class Guerrier extends Personnage {
+public class Guerrier extends Personnage implements AutoCloseable {
     private boolean cheval=false;
+    public static int nbr_Guerrier=0;
 
      public Guerrier(String nom_Perso, int nbVie,boolean cheval) {
         super(nom_Perso, nbVie);
         this.cheval = cheval;
+        nbr_combatant++;
+        nbr_Guerrier++;
     }
 
     public void setCheval(boolean cheval) {
@@ -24,6 +27,11 @@ public class Guerrier extends Personnage {
 
     public boolean isCheval() {
         return cheval;
+    }
+    @Override
+    public void close() {
+        nbr_combatant--;
+        nbr_Guerrier--;
     }
 
     @Override
