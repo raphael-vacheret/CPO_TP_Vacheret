@@ -10,7 +10,7 @@ import Personnages.Personnage;
  *
  * @author Administrateur
  */
-public class Guerrier extends Personnage implements AutoCloseable {
+public class Guerrier extends Personnage implements AutoCloseable  {
     private boolean cheval=false;
     public static int nbr_Guerrier=0;
 
