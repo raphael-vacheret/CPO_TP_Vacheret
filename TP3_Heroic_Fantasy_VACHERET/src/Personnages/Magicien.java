@@ -20,6 +20,7 @@ public class Magicien extends Personnage {
         this.comfirme = comfirme;
         nbr_combatant++;
         nbr_Magicien++;
+        this.setPoints(20);
     }
 
     public void setComfirme(boolean comfirme) {

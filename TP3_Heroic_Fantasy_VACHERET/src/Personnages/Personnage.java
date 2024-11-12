@@ -4,15 +4,17 @@ import Armes.Baton;
 import Armes.Arme;
 import tp3_heroic_fantasy_vacheret.TP3_Heroic_Fantasy_VACHERET;
 import java.util.ArrayList;
+import tp3_heroic_fantasy_vacheret.etreVivant;
 /**
  *
  * @author Administrateur
  */
-public abstract class Personnage {
+public abstract class Personnage implements etreVivant {
     private String nom_Perso;
     private int nbVie;
     int nbArme=0;
     Arme Arme_en_Main=null;
+    int points=0;
     ArrayList<Arme> liste_Arme = new ArrayList<>();
     public static int nbr_combatant=0;
     public Personnage(String nom_Perso , int nbVie) {
@@ -32,6 +34,13 @@ public abstract class Personnage {
     public Arme getArme_en_Main() {
         return Arme_en_Main;
     }
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
     
 
     
@@ -45,13 +54,12 @@ public abstract class Personnage {
             return false;
         }
         liste_Arme.add(Arme_a_ajouter);
-        nbArme++;
-        perso = this ; 
+        nbArme++; 
         return true;
     }
-    public Arme equiper_Arme( int x) {
+    public Arme equiper_Arme(int x) {
         Arme_en_Main=liste_Arme.get(x);
-        System.out.println(nom_Perso+" equipe :["+liste_Arme.get(x)+"" );
+        System.out.println(nom_Perso+" equipe :["+liste_Arme.get(x)+"]" );
         return Arme_en_Main;
     }
     public String competences() {
@@ -60,5 +68,17 @@ public abstract class Personnage {
                 +"il a :"+nbArme+" arme qui sont :"+liste_Arme+ System.lineSeparator()
                 +"l'arme equipe par "+nom_Perso+" est :["+Arme_en_Main+"]";
         return competence;
+    }
+    @Override
+    public void seFatiguer() {
+        nbVie=nbVie-10;       
+    }
+    @Override
+    public boolean estVivant() {
+        return nbVie>0;                
+    }
+
+    public void estAttaqué(Personnage this.getPoints() {
+        nbVie=nbVie-this.getPoints();
     }
 }

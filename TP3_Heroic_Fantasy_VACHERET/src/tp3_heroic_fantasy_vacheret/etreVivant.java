@@ -9,13 +9,7 @@ package tp3_heroic_fantasy_vacheret;
  * @author Administrateur
  */
 public interface etreVivant {
-    void seFatiguer() {
-        
-    }
-    boolean estVivant() {
-        
-    }
-    void estAttaqué(int points) {
-        
-    }
+    public void seFatiguer();
+    boolean estVivant();
+    void estAttaqué(int points);
 }

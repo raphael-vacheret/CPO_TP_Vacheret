@@ -19,6 +19,7 @@ public class Guerrier extends Personnage implements AutoCloseable  {
         this.cheval = cheval;
         nbr_combatant++;
         nbr_Guerrier++;
+        this.setPoints(30);
     }
 
     public void setCheval(boolean cheval) {
