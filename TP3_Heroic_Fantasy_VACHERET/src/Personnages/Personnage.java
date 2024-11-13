@@ -63,11 +63,20 @@ public abstract class Personnage implements etreVivant {
         return Arme_en_Main;
     }
     public String competences() {
-        String competence;
-        competence = "nom :"+nom_Perso+", niveau : "+nbVie+""+System.lineSeparator()
-                +"il a :"+nbArme+" arme qui sont :"+liste_Arme+ System.lineSeparator()
-                +"l'arme equipe par "+nom_Perso+" est :["+Arme_en_Main+"]";
-        return competence;
+        String competence="nom :"+nom_Perso+", niveau : "+nbVie+""+System.lineSeparator()
+                        +"il a :"+nbArme+" arme qui sont :"+liste_Arme+ System.lineSeparator()
+                        +"l'arme equipe par "+nom_Perso+" est :["+Arme_en_Main+"]" + System.lineSeparator()
+                        +"les armes preferes de "+nom_Perso+" sont :";
+        for (int i=0;i<liste_Arme.size();i++) {
+            if (this instanceof Guerrier && liste_Arme.get(i) instanceof Epee) {
+                competence +=liste_Arme.get(i);                                    
+            }
+            if (this instanceof Magicien && liste_Arme.get(i) instanceof Baton) {
+                competence += liste_Arme.get(i)+" ";      
+            }
+            
+        }
+    return competence;
     }
     @Override
     public void seFatiguer() {
@@ -77,8 +86,8 @@ public abstract class Personnage implements etreVivant {
     public boolean estVivant() {
         return nbVie>0;                
     }
-
-    public void estAttaqué(Personnage this.getPoints() {
+    @Override
+    public void estAttaqué() {
         nbVie=nbVie-this.getPoints();
     }
 }
