@@ -41,28 +41,39 @@ public class TP3_Heroic_Fantasy_VACHERET {
         TabPersonnage.add(GuerrierDeux);
         TabPersonnage.add(unMage);
         TabPersonnage.add(MageDeux);
-        //System.out.println(TabArme.toString());
-        //System.out.println(TabPersonnage.toString());
-        unGuerrier.ajouter_Arme(Exca);
-        unGuerrier.ajouter_Arme(Duran);
-        unGuerrier.ajouter_Arme(Che);
-        unGuerrier.equiper_Arme(0);
-        unMage.ajouter_Arme(Gram);
-        unMage.ajouter_Arme(Char);
-        unMage.ajouter_Arme(Sur);       
+        //System.out.println(TabArme);
+        //System.out.println(TabPersonnage);
+        //unGuerrier.ajouter_Arme(Exca);
+        //unGuerrier.ajouter_Arme(Duran);
+        //unGuerrier.ajouter_Arme(Che);
+        //unGuerrier.equiper_Arme(0);
+        //unMage.ajouter_Arme(Gram);
+        //unMage.ajouter_Arme(Char);
+        //unMage.ajouter_Arme(Sur);       
         //System.out.println(unGuerrier.getArme_en_Main());
         //System.out.println(GuerrierDeux.getArme_en_Main());
         //GuerrierDeux.getArme_en_Main();
-        System.out.println(unMage.competences());
-        System.out.println("il y a :"+Personnage.nbr_combatant+" personnage present dans le jeu");
-        System.out.println("il y a :"+Guerrier.nbr_Guerrier+" guerrier present dans le jeu");
-        System.out.println("il y a :"+Magicien.nbr_Magicien+" magicien present dans le jeu");
+        //System.out.println(unMage.competences());
+        //System.out.println("il y a :"+Personnage.nbr_combatant+" personnage present dans le jeu");
+        //System.out.println("il y a :"+Guerrier.nbr_Guerrier+" guerrier present dans le jeu");
+        //System.out.println("il y a :"+Magicien.nbr_Magicien+" magicien present dans le jeu");
         MageDeux.close();
         MageDeux=null;
+        GuerrierDeux.close();
+        GuerrierDeux=null;
         System.gc();
         System.out.println("il y a :"+Magicien.nbr_Magicien+" magicien present dans le jeu");
+        System.out.println("il y a :"+Guerrier.nbr_Guerrier+" guerrier present dans le jeu");
+        System.out.println("il y a :"+Personnage.nbr_combatant+" personnage present dans le jeu");
+        System.out.println(unMage.competences());
+        System.out.println(unGuerrier.competences());
+        unGuerrier.seFatiguer();
         //System.out.println(MageDeux.toString());
-        System.out.println(unMage.toString());
+        //System.out.println(unMage);
+        System.out.println(unGuerrier.competences());
+        unMage.estAttaqué(unGuerrier);
+        System.out.println(unMage.competences());
+        
     }
     
 }

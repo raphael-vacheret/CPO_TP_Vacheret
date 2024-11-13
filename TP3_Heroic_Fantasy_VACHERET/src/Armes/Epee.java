@@ -23,6 +23,6 @@ public class Epee extends Arme {
 
     @Override
     public String toString() {
-        return "nom=" + getNom() + ", age=" + this.finesse + ", niveau=" + getNiveau();
+        return "nom=" + getNom() + ", finesse=" + this.finesse + ", niveau=" + getNiveau();
     }
 }

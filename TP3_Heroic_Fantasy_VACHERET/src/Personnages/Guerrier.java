@@ -10,7 +10,7 @@ import Personnages.Personnage;
  *
  * @author Administrateur
  */
-public class Guerrier extends Personnage implements AutoCloseable  {
+public class Guerrier extends Personnage  {
     private boolean cheval=false;
     public static int nbr_Guerrier=0;
 
@@ -29,7 +29,7 @@ public class Guerrier extends Personnage implements AutoCloseable  {
     public boolean isCheval() {
         return cheval;
     }
-    @Override
+    
     public void close() {
         nbr_combatant--;
         nbr_Guerrier--;
@@ -37,7 +37,7 @@ public class Guerrier extends Personnage implements AutoCloseable  {
 
     @Override
     public String toString() {
-        return "nom=" + getNom() + ", age=" + cheval + ", niveau=" + getNiveau();
+        return "nom=" + getNom() + ",est a cheval :" + cheval + ", niveau=" + getNiveau();
     }
     
     

@@ -38,7 +38,7 @@ public class Magicien extends Personnage {
     
     @Override
     public String toString() {
-        return "nom=" + getNom() + ", age=" + comfirme + ", niveau=" + getNiveau();
+        return "nom=" + getNom() + ", niveau=" + comfirme + ", niveau=" + getNiveau();
     }
     
 }

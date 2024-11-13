@@ -4,6 +4,8 @@
  */
 package tp3_heroic_fantasy_vacheret;
 
+import Personnages.Personnage;
+
 /**
  *
  * @author Administrateur
@@ -11,5 +13,5 @@ package tp3_heroic_fantasy_vacheret;
 public interface etreVivant {
     public void seFatiguer();
     boolean estVivant();
-    void estAttaqué(int points);
+    void estAttaqué(Personnage attaquant);
 }

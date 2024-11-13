@@ -63,18 +63,20 @@ public abstract class Personnage implements etreVivant {
         return Arme_en_Main;
     }
     public String competences() {
-        String competence="nom :"+nom_Perso+", niveau : "+nbVie+""+System.lineSeparator()
-                        +"il a :"+nbArme+" arme qui sont :"+liste_Arme+ System.lineSeparator()
-                        +"l'arme equipe par "+nom_Perso+" est :["+Arme_en_Main+"]" + System.lineSeparator()
-                        +"les armes preferes de "+nom_Perso+" sont :";
-        for (int i=0;i<liste_Arme.size();i++) {
-            if (this instanceof Guerrier && liste_Arme.get(i) instanceof Epee) {
-                competence +=liste_Arme.get(i);                                    
-            }
-            if (this instanceof Magicien && liste_Arme.get(i) instanceof Baton) {
-                competence += liste_Arme.get(i)+" ";      
-            }
-            
+        String competence=nom_Perso+" est mort";
+        if(nbVie>0) {
+            competence="nom :"+nom_Perso+", vie : "+nbVie+""+System.lineSeparator()
+                            +"il a :"+nbArme+" arme qui sont :"+liste_Arme+ System.lineSeparator()
+                            +"l'arme equipe par "+nom_Perso+" est :["+Arme_en_Main+"]" + System.lineSeparator()
+                            +"les armes preferes de "+nom_Perso+" sont :";
+            for (int i=0;i<liste_Arme.size();i++) {
+                if (this instanceof Guerrier && liste_Arme.get(i) instanceof Epee) {
+                    competence +=liste_Arme.get(i);                                    
+                }
+                if (this instanceof Magicien && liste_Arme.get(i) instanceof Baton) {
+                    competence += liste_Arme.get(i)+" ";      
+                }
+            }    
         }
     return competence;
     }
@@ -87,7 +89,8 @@ public abstract class Personnage implements etreVivant {
         return nbVie>0;                
     }
     @Override
-    public void estAttaqué() {
-        nbVie=nbVie-this.getPoints();
+    public void estAttaqué(Personnage attaquant) {
+        if (attaquant instanceof Guerrier) nbVie=nbVie-30;
+        else nbVie=nbVie-20;
     }
 }
