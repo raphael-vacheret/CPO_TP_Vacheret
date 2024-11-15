@@ -15,15 +15,15 @@ import Personnages.Personnage;
 
 public class TP3_Heroic_Fantasy_VACHERET {
     public static void main(String[] args) {
-        Epee Exca = new Epee(70,"Excalibur",50);
-        Epee Duran = new Epee(40,"Durandal",70);
+        Epee Exca = new Epee(7,"Excalibur",5);
+        Epee Duran = new Epee(4,"Durandal",7);
         Epee Gram = new Epee(60,"Gram",60);
-        Baton Che = new Baton(40,"Chene",50);
-        Baton Char = new Baton(50,"Charme",60);
+        Baton Che = new Baton(4,"Chene",5);
+        Baton Char = new Baton(5,"Charme",6);
         Baton Sur = new Baton(80,"baguette de sureau",70);
         Guerrier unGuerrier = new Guerrier("Lannister", 45,true);
         Guerrier GuerrierDeux = new Guerrier("Conan", 78,false);
-        Magicien unMage = new Magicien("Gandlaf",65,true);
+        Magicien unMage = new Magicien("Gandlaf",65,false);
         Magicien MageDeux = new Magicien("Garcimore",44,false);
         //System.out.println("l'epee "+Exca.getNom()+" a un niveau de : "+Exca.getNiveau()+" et une finesse de "+Exca.getFinesse()+"");
         //System.out.println("l'epee "+Duran.getNom()+" a un niveau de : "+Duran.getNiveau()+" et une finesse de "+Duran.getFinesse()+"");
@@ -67,13 +67,22 @@ public class TP3_Heroic_Fantasy_VACHERET {
         System.out.println("il y a :"+Personnage.nbr_combatant+" personnage present dans le jeu");
         System.out.println(unMage.competences());
         System.out.println(unGuerrier.competences());
-        unGuerrier.seFatiguer();
+        //unGuerrier.seFatiguer();
         //System.out.println(MageDeux.toString());
         //System.out.println(unMage);
-        System.out.println(unGuerrier.competences());
+        //System.out.println(unGuerrier.competences());
+        //unMage.estAttaqué(unGuerrier);
+        //System.out.println(unMage.competences());
+        unGuerrier.ajouter_Arme(Exca);
+        unGuerrier.ajouter_Arme(Che);
+        unMage.ajouter_Arme(Duran);
+        unMage.ajouter_Arme(Char);
+        unGuerrier.equiper_Arme(0);
+        unMage.equiper_Arme(0);
         unMage.estAttaqué(unGuerrier);
+        unGuerrier.estAttaqué(unMage);
         System.out.println(unMage.competences());
-        
+        System.out.println(unGuerrier.competences());
     }
     
 }
